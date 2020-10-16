@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<mavlink>
+    <include>common.xml</include>
+    <include>ardupilotmega.xml</include>
+    <include>uAvionix.xml</include>
+    <include>icarous.xml</include>
+    <dialect>2</dialect>
+    <enums>
+        <!-- We start at 44000 because it's unused. -->
+<!--         <enum name="MAV_CMD">
+            <entry value="44000" name="MAV_CMD_TEST1">
+                <param index="1"> empty </param>
+                <param index="2"> empty </param>
+                <param index="3"> empty </param>
+                <param index="4"> empty </param>
+                <param index="5"> empty </param>
+                <param index="6"> empty </param>
+                <param index="7"> empty </param>
+            </entry>
+            <entry value="44001" name="MAV_CMD_TEST2">
+                <param index="1"> empty </param>
+                <param index="2"> empty </param>
+                <param index="3"> empty </param>
+                <param index="4"> empty </param>
+                <param index="5"> empty </param>
+                <param index="6"> empty </param>
+                <param index="7"> empty </param>
+            </entry>
+        </enum> -->
+        <enum name="CUSTOM_ENUM">
+            <entry value="0" name="CUSTOM_ENUM1"/>
+            <entry value="1" name="CUSTOM_ENUM2"/>
+            <entry value="2" name="CUSTOM_ENUM3"/>
+        </enum>
+    </enums>
+
+    <!-- We start at 13000 because it's unused. -->
+    <messages>
+        <message id="13001" name="CUSTOM_MESSAGE_TEST">
+            <description>This is just a test</description>
+            <field type="int32_t" name="lat"> empty </field>
+            <field type="int32_t" name="lon"> empty </field>
+            <field type="int32_t" name="alt"> empty </field>
+        </message>
+    </messages>
+</mavlink>
