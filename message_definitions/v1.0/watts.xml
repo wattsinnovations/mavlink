@@ -36,11 +36,11 @@
 
     <!-- We start at 13000 because it's unused. -->
     <messages>
-        <message id="13001" name="CUSTOM_MESSAGE_TEST">
-            <description>This is just a test</description>
-            <field type="int32_t" name="lat"> empty </field>
-            <field type="int32_t" name="lon"> empty </field>
-            <field type="int32_t" name="alt"> empty </field>
+        <message id="13001" name="EEPROM_PAGE">
+            <description>Contains information about an EEPROM with page size 16 bytes and 32 total pages </description>
+            <field type="uint32_t" name="index"> The eeprom board index, 0 indexed </field>
+            <field type="char[16]" name="page_data"> Opaque page data </field>
+            <field type="uint32_t" name="page_num"> Page number, 0 indexed </field>
         </message>
     </messages>
 </mavlink>
