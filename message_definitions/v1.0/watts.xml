@@ -38,9 +38,31 @@
     <messages>
         <message id="13001" name="EEPROM_PAGE">
             <description>Contains information about an EEPROM with page size 16 bytes and 32 total pages </description>
+            <field type="uint8_t" name="target_system">System ID</field>
             <field type="uint32_t" name="index"> The eeprom board index, 0 indexed </field>
             <field type="char[16]" name="page_data"> Opaque page data </field>
             <field type="uint32_t" name="page_num"> Page number, 0 indexed </field>
+        </message>
+
+        <message id="13002" name="NETWORK_STATUS">
+            <description>Contains SSID of configured network and status of connection </description>
+            <field type="uint8_t" name="target_system">System ID</field>
+            <field type="uint8_t" name="connected"> Boolean indcator to determine connection to internet </field>
+            <field type="char[32]" name="ssid"> SSID name -- 802.11 standard 32 characters max </field>
+        </message>
+
+        <message id="13003" name="NETWORK_CONNECTION_REQUEST">
+            <description>Request system/component to connect to the network </description>
+            <field type="uint8_t" name="target_system">System ID</field>
+            <field type="char[32]" name="ssid"> SSID name -- 802.11 standard 32 characters max </field>
+            <field type="char[64]" name="password"> Network password -- WPA2 up to 63 characters </field>
+        </message>
+
+        <message id="13004" name="PRISM_VERSION_INFO">
+            <description>Contains information about an EEPROM with page size 16 bytes and 32 total pages </description>
+            <field type="uint8_t" name="target_system">System ID</field>
+            <field type="char[32]" name="ssid"> SSID name -- 802.11 standard 32 characters max </field>
+            <field type="char[64]" name="password"> Network password -- WPA2 up to 63 characters </field>
         </message>
     </messages>
 </mavlink>
