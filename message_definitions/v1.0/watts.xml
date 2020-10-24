@@ -40,7 +40,7 @@
         <message id="13004" name="PRISM_VERSION_INFO">
             <description> Contains version info for each PRISM asset </description>
             <field type="uint8_t" name="target_system"> System ID </field>
-            <field type="char[32]" name="asset_string"> Name of asset </field>
+            <field type="uint8_t" name="is_current_version"> Boolean indicating if this is the current version </field>
             <field type="char[32]" name="version_string"> Name of version </field>
         </message>
 
