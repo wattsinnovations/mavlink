@@ -41,13 +41,14 @@
             <description> Contains version info for each PRISM asset </description>
             <field type="uint8_t" name="target_system"> System ID </field>
             <field type="uint8_t" name="is_current_version"> Boolean indicating if this is the current version </field>
-            <field type="char[32]" name="version_string"> Name of version </field>
+            <field type="char[16]" name="component_name"> Name of component </field>
+            <field type="char[16]" name="version"> Version </field>
         </message>
 
         <message id="13005" name="SOFTWARE_UPDATE_REQUEST">
             <description> Contains information about an EEPROM with page size 16 bytes and 32 total pages </description>
             <field type="uint8_t" name="target_system"> System ID </field>
-            <field type="char[32]" name="release_string"> Name of release to update to </field>
+            <field type="char[16]" name="release_string"> Name of release to update to </field>
         </message>
     </messages>
 </mavlink>
