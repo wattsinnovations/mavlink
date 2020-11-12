@@ -6,7 +6,7 @@
     <include>icarous.xml</include>
     <dialect>2</dialect>
     <enums>
-        <enum name="CUSTOM_ENUM">
+        <enum name="PRISM_SYSTEM">
             <entry value="0" name="CUSTOM_ENUM1"/>
             <entry value="1" name="CUSTOM_ENUM2"/>
             <entry value="2" name="CUSTOM_ENUM3"/>
@@ -49,6 +49,15 @@
             <description> Contains information about an EEPROM with page size 16 bytes and 32 total pages </description>
             <field type="uint8_t" name="target_system"> System ID </field>
             <field type="char[16]" name="release_string"> Name of release to update to </field>
+        </message>
+
+        <message id="13006" name="PRISM_VEHICLE_INFO">
+            <description> Contains information about the vehicle. </description>
+            <field type="uint8_t" name="target_system"> System ID </field>
+            <!-- <field type="char[16]" name="name"> Name of the system </field> -->
+            <field type="uint64_t" name="flight_time"> Total recorded flight time </field>
+            <!-- <field type="int" name="system_type"> System type enum </field> -->
+            <!-- <field type="char[10]" name="dom"> Date of manufacture - mm_dd_yyyy </field> -->
         </message>
     </messages>
 </mavlink>
