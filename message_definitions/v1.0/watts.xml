@@ -6,10 +6,11 @@
     <include>icarous.xml</include>
     <dialect>2</dialect>
     <enums>
-        <enum name="PRISM_SYSTEM">
-            <entry value="0" name="CUSTOM_ENUM1"/>
-            <entry value="1" name="CUSTOM_ENUM2"/>
-            <entry value="2" name="CUSTOM_ENUM3"/>
+        <enum name="PROP_ID_LOC">
+            <entry value="1" name="FrontRight"/>
+            <entry value="2" name="BackRight"/>
+            <entry value="3" name="BackLeft"/>
+            <entry value="4" name="FrontLeft"/>
         </enum>
     </enums>
 
@@ -66,6 +67,7 @@
             <field type="uint8_t" name="target_system"> System ID </field>
             <field type="uint8_t" name="eeprom_index"> The eeprom board index, 0 indexed </field>
             <field type="uint8_t" name="id"> Propulsion ID </field>
+            <field type="uint8_t" name="location"> Location on aircraft. See PROP_ID_LOC enum. </field>
             <field type="uint64_t" name="flight_time"> Propulsion system flight time </field>
             <!-- <extensions/> -->
         </message>
