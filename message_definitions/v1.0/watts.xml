@@ -64,7 +64,9 @@
         <message id="13007" name="PRISM_PROPULSION_ID">
             <description> Contains information relevant to PRISM Propulsion ID. </description>
             <field type="uint8_t" name="target_system"> System ID </field>
+            <field type="uint8_t" name="eeprom_index"> The eeprom board index, 0 indexed </field>
             <field type="uint8_t" name="id"> Propulsion ID </field>
+            <field type="uint64_t" name="flight_time"> Propulsion system flight time </field>
             <!-- <extensions/> -->
         </message>
     </messages>
