@@ -54,10 +54,18 @@
         <message id="13006" name="PRISM_VEHICLE_INFO">
             <description> Contains information about the vehicle. </description>
             <field type="uint8_t" name="target_system"> System ID </field>
-            <!-- <field type="char[16]" name="name"> Name of the system </field> -->
             <field type="uint64_t" name="flight_time"> Total recorded flight time </field>
+            <!-- <extensions/> -->
+            <!-- <field type="char[16]" name="name"> Name of the system </field> -->
             <!-- <field type="int" name="system_type"> System type enum </field> -->
             <!-- <field type="char[10]" name="dom"> Date of manufacture - mm_dd_yyyy </field> -->
+        </message>
+
+        <message id="13007" name="PRISM_PROPULSION_ID">
+            <description> Contains information relevant to PRISM Propulsion ID. </description>
+            <field type="uint8_t" name="target_system"> System ID </field>
+            <field type="uint8_t" name="id"> Propulsion ID </field>
+            <!-- <extensions/> -->
         </message>
     </messages>
 </mavlink>
