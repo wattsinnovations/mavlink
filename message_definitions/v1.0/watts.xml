@@ -56,6 +56,7 @@
             <description> Contains information about the vehicle. </description>
             <field type="uint8_t" name="target_system"> System ID </field>
             <field type="uint64_t" name="flight_time"> Total recorded flight time </field>
+            <field type="uint8_t" name="fpv_camera_selected"> Value is zero if not selected </field>
             <!-- <extensions/> -->
             <!-- <field type="char[16]" name="name"> Name of the system </field> -->
             <!-- <field type="int" name="system_type"> System type enum </field> -->
