@@ -72,5 +72,7 @@
             <field type="uint64_t" name="flight_time"> Propulsion system flight time </field>
             <!-- <extensions/> -->
         </message>
+
     </messages>
+
 </mavlink>
